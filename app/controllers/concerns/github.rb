@@ -12,7 +12,9 @@ module Github
         res = http.request(req)
         res_data=JSON.parse(res.body)
         if res_data.count>0 then
-            Date.parse(res_data[0]["commit"]["committer"]["date"])
+            if res_data[0] && res_data[0]["commit"] && res_data[0]["commit"]["committer"] && res_data[0]["commit"]["committer"]["date"] then
+                Date.parse(res_data[0]["commit"]["committer"]["date"])
+            end
         end 
     end
 end

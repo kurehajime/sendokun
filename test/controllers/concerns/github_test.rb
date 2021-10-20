@@ -11,8 +11,8 @@ class GithubTest < ActionDispatch::IntegrationTest
   end
 
   test "get commit time by github api" do
-    assert_kind_of Date, @github.get_file_modify_date("kurehajime","shelf_life","README.md") 
-    assert_nil @github.get_file_modify_date("kurehajime","shelf_life","DONT_README.md") 
+    assert_kind_of Date, @github.get_file_modify_date("kurehajime","sendokun","README.md") 
+    assert_nil @github.get_file_modify_date("kurehajime","sendokun","DONT_README.md") 
   end
 
 end
