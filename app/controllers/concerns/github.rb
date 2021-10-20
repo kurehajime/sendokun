@@ -6,6 +6,17 @@ module Github
     
     def get_file_modify_date(user,repo,path)        
         uri = URI("https://api.github.com/repos/#{user}/#{repo}/commits?path=#{path}")
+        get_modify_date(uri)
+    end
+
+    def get_repo_modify_date(user,repo)        
+        uri = URI("https://api.github.com/repos/#{user}/#{repo}/commits")
+        get_modify_date(uri)
+    end
+
+    private 
+
+    def get_modify_date(uri)
         http = Net::HTTP.new(uri.host, uri.port)
         http.use_ssl = true
         req = Net::HTTP::Get.new(uri)
@@ -17,4 +28,5 @@ module Github
             end
         end 
     end
+
 end
