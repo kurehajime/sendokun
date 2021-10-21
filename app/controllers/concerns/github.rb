@@ -5,12 +5,12 @@ module Github
     extend ActiveSupport::Concern
     
     def get_file_modify_date(user,repo,path)        
-        uri = URI("https://api.github.com/repos/#{user}/#{repo}/commits?path=#{path}")
-        get_modify_date(uri)
-    end
-
-    def get_repo_modify_date(user,repo)        
-        uri = URI("https://api.github.com/repos/#{user}/#{repo}/commits")
+        if path.blank? then
+            uri = URI("https://api.github.com/repos/#{user}/#{repo}/commits")
+        else
+            uri = URI("https://api.github.com/repos/#{user}/#{repo}/commits?path=#{path}")
+        end
+        
         get_modify_date(uri)
     end
 
