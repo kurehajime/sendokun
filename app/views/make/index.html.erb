@@ -1,1 +1,22 @@
-hello
+<h1>鮮度くん</h1>
+
+<label for="yyyymmdd" class="lbl">ドキュメント更新日 :
+    <input type="date" name="yyyymmdd" id="yyyymmdd">
+</label>
+<label for="user" class="lbl">ユーザー名 :
+    <input type="text" name="user" id="user">
+</label>
+<label for="repo" class="lbl">リポジトリ :
+    <input type="text" name="repo" id="repo">
+</label>
+<label for="path" class="lbl">ファイル(option) :
+    <input type="text" name="path" id="path">
+</label>
+<input type="button" id="make" value="生成">
+<label for="result" class="lbl">画像URL :
+    <input type="text" name="result" id="result" size="100">
+</label>
+<label for="result_tag" class="lbl">Markdownタグ :
+    <input type="text" name="result_tag" id="result_tag" size="100">
+</label>
+<%= javascript_pack_tag 'make/index' %>
