@@ -3,9 +3,9 @@
 
 ドキュメントがソースに比べて古くなっていないかチェックするバッジサービス。
 
-ここで動く。
+ここで動く。  
 https://doc-is-fresh.herokuapp.com/make
 
 
-概念説明
+概念説明  
 https://docs.google.com/presentation/d/1TtICfHela76BKD4dUfXkIEqwhi_NLiuPyT9jVxkh2e8/edit?usp=sharing
