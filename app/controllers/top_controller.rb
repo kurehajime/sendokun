@@ -2,6 +2,7 @@ class TopController < ApplicationController
     include Github
 
     def index
+        expires_now
         file_modify_date , doc_modify_date = get_file_and_doc_modify_date()
         if file_modify_date && doc_modify_date then
             if file_modify_date <= doc_modify_date  then
