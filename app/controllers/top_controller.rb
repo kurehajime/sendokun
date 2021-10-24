@@ -28,7 +28,7 @@ private
             return nil,nil
         end
 
-        file_modify_date = get_file_modify_date(params[:user],params[:repo],params[:path])
+        file_modify_date = get_file_modify_date(params[:user],params[:repo],params[:branch],params[:path])
 
         unless file_modify_date && doc_modify_date then
             return nil,nil

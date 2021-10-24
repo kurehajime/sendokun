@@ -4,12 +4,12 @@ require "uri"
 module Github
     extend ActiveSupport::Concern
     
-    def get_file_modify_date(user,repo,path)        
-        if path.blank? then
-            uri = URI("https://api.github.com/repos/#{user}/#{repo}/commits")
-        else
-            uri = URI("https://api.github.com/repos/#{user}/#{repo}/commits?path=#{path}")
-        end
+    def get_file_modify_date(user,repo,branch,path)  
+        uri = URI("https://api.github.com/repos/#{user}/#{repo}/commits")
+        uri.query = {
+            path:path,
+            sha:branch,
+        }.to_param
         
         get_modify_date(uri)
     end

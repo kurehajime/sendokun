@@ -11,13 +11,18 @@
     <input type="date" name="yyyymmdd" id="yyyymmdd">
 </label>
 <label for="user" class="lbl">ユーザー名 :
-    <input type="text" name="user" id="user">
+    <input type="text" name="user" id="user" placeholder="user" >
+    <span class="description">https://github.com/<b>user</b>/repository/</span>
 </label>
 <label for="repo" class="lbl">リポジトリ名 :
-    <input type="text" name="repo" id="repo">
+    <input type="text" name="repo" id="repo" placeholder="repository">
+    <span class="description">https://github.com/user/<b>repository</b>/</span>
+</label>
+<label for="branch" class="lbl">ブランチ名 :
+    <input type="text" name="branch" id="branch" placeholder="main">
 </label>
 <label for="path" class="lbl">ファイル(option) :
-    <input type="text" name="path" id="path">
+    <input type="text" name="path" id="path" placeholder="README.md">
 </label>
 <input type="button" id="make" value="生成">
 <label for="result" class="lbl">画像URL :
