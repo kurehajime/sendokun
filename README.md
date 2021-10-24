@@ -1,4 +1,6 @@
 # 鮮度くん
+![sendokun](https://doc-is-fresh.herokuapp.com?yyyymmdd=20211024&user=kurehajime&repo=sendokun&path=README.md)
+
 
 ドキュメントがソースに比べて古くなっていないかチェックするバッジサービス。
 
