@@ -1,5 +1,5 @@
 # 鮮度くん
-![sendokun](https://kurehajime-sendokun-5wxqqwq27r6-3000.githubpreview.dev?yyyymmdd=20211025&user=kurehajime&repo=sendokun&path=test&branch=master)
+![sendokun](https://doc-is-fresh.herokuapp.com?yyyymmdd=20211024&user=kurehajime&repo=sendokun&path=test&branch=master)
 
 ドキュメントがソースに比べて古くなっていないかチェックするバッジサービス。
 
