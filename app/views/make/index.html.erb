@@ -1,12 +1,19 @@
 <h1>鮮度くん</h1>
-
+<p>
+『Githubリポジトリの特定のファイルの最終更新日』と『ドキュメントの更新日』を比較して、
+ドキュメントの方が古くなっていたら教えてくれるバッジを作成できるサービスです。
+</p>
+<p>
+ファイルより新しいドキュメントには<%= image_tag '/assets/fresh.svg' %>が表示され、
+ファイルより古いドキュメントには<%= image_tag '/assets/stale.svg' %>が表示されます。
+</p>
 <label for="yyyymmdd" class="lbl">ドキュメント更新日 :
     <input type="date" name="yyyymmdd" id="yyyymmdd">
 </label>
 <label for="user" class="lbl">ユーザー名 :
     <input type="text" name="user" id="user">
 </label>
-<label for="repo" class="lbl">リポジトリ :
+<label for="repo" class="lbl">リポジトリ名 :
     <input type="text" name="repo" id="repo">
 </label>
 <label for="path" class="lbl">ファイル(option) :
